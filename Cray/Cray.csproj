@@ -2,10 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>CrayFi.Sdk</PackageId>
     <Version>1.0.0</Version>
-    <Authors>Noibilism</Authors>
-    <Company>CrayFi</Company>
-    <Description>Official CrayFi .NET SDK</Description>
+    <Authors>Cray Finance</Authors>
+    <Company>Cray Finance</Company>
+    <Description>Official .NET SDK for Cray Finance APIs</Description>
+    <PackageProjectUrl>https://github.com/noibilism/crayfi-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/noibilism/crayfi-dotnet</RepositoryUrl>
+    <PackageTags>cray;finance;payments;sdk;fintech</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
