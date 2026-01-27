@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>CrayFi.Sdk</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Cray Finance</Authors>
     <Company>Cray Finance</Company>
     <Description>Official .NET SDK for Cray Finance APIs</Description>
@@ -11,10 +11,15 @@
     <RepositoryUrl>https://github.com/noibilism/crayfi-dotnet</RepositoryUrl>
     <PackageTags>cray;finance;payments;sdk;fintech</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
