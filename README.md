@@ -1,6 +1,13 @@
-# Cray .NET SDK
+# Cray Finance .NET SDK
 
-A C# .NET Standard library for integrating with the Cray Finance API.
+Official .NET SDK for Cray Finance APIs. This library targets .NET Standard 2.0, making it compatible with .NET Core 2.0+, .NET Framework 4.6.1+, and modern .NET 5/6/7/8 applications.
+
+## Requirements
+
+- .NET Standard 2.0 compatible runtime
+  - .NET Core 2.0+
+  - .NET Framework 4.6.1+
+  - .NET 5+
 
 ## Installation
 
