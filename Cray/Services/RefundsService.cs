@@ -8,12 +8,12 @@ namespace Cray.Services
 
         public async Task<object> Initiate(object data)
         {
-            return await _client.PostAsync<object>("v2/refund/initiate", data);
+            return await _client.PostAsync<object>("api/v2/refund/initiate", data);
         }
 
         public async Task<object> Query(string reference)
         {
-            return await _client.GetAsync<object>($"v2/refund/query/{reference}");
+            return await _client.GetAsync<object>($"api/v2/refund/query/{reference}");
         }
     }
 }
