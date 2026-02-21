@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>CrayFi.Sdk</PackageId>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>Cray Finance</Authors>
     <Company>Cray Finance</Company>
     <Description>Official .NET SDK for Cray Finance APIs</Description>
