@@ -20,6 +20,7 @@ namespace Cray
         public FxService FX { get; }
         public PayoutsService Payouts { get; }
         public RefundsService Refunds { get; }
+        public VirtualAccountsService VirtualAccounts { get; }
 
         public CrayClient(string baseUrl, string token)
         {
@@ -37,6 +38,7 @@ namespace Cray
             FX = new FxService(this);
             Payouts = new PayoutsService(this);
             Refunds = new RefundsService(this);
+            VirtualAccounts = new VirtualAccountsService(this);
         }
 
         public async Task<T> PostAsync<T>(string endpoint, object data)
