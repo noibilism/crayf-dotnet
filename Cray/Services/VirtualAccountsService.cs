@@ -26,9 +26,14 @@ namespace Cray.Services
             return await _client.GetAsync<object>("api/virtual-accounts/providers");
         }
 
+        public async Task<object> GenerateWallet(object data)
+        {
+            return await _client.PostAsync<object>("api/virtual-accounts/generate-wallet", data);
+        }
+
         public async Task<object> SubmitOtp(object data)
         {
-            return await _client.PostAsync<object>("api/virtual-accounts/submit-otp", data);
+            return await GenerateWallet(data);
         }
     }
 }

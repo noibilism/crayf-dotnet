@@ -165,6 +165,31 @@ var transfer = await client.Payouts.Disburse(new
 var status = await client.Payouts.Verify("transaction-id");
 ```
 
+#### Crypto Payouts
+
+```csharp
+// Get supported crypto payout assets
+var assets = await client.CryptoPayouts.SupportedAssets();
+
+// Add a wallet beneficiary
+var beneficiary = await client.CryptoPayouts.AddBeneficiary(new
+{
+    name = "OMU",
+    asset = "TRX_USDT_S2UZ",
+    wallet_address = "wallet_address"
+});
+
+// Initiate a crypto payout
+var payout = await client.CryptoPayouts.InitiatePayout(new
+{
+    amount = "2",
+    currency = "TRX_USDT_S2UZ",
+    address_reference = "beneficiary_reference",
+    customer_reference = "customer_ref_123",
+    narration = "Stablecoin payout"
+});
+```
+
 #### Refunds
 
 ```csharp
@@ -178,6 +203,16 @@ var refund = await client.Refunds.Initiate(new
 
 // Query Refund
 var refundStatus = await client.Refunds.Query("refund-ref");
+```
+
+#### Failed Payout Webhooks
+
+```csharp
+// List failed payout webhooks
+var failed = await client.Webhooks.FailedPayoutWebhooks();
+
+// Retry a failed payout webhook
+var retry = await client.Webhooks.RetryFailedPayoutWebhook("50");
 ```
 
 #### Virtual Accounts
@@ -211,10 +246,9 @@ var list = await client.VirtualAccounts.List();
 // Get available virtual account providers
 var providers = await client.VirtualAccounts.Providers();
 
-// Submit OTP to complete the two-step Wema flow
-var result = await client.VirtualAccounts.SubmitOtp(new
+// Submit OTP to generate the Wema wallet
+var result = await client.VirtualAccounts.GenerateWallet(new
 {
-    merchant_id = "123",
     otp = "768238",
     customer_email = "hello@gmail.com"
 });

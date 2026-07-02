@@ -21,6 +21,10 @@ namespace Cray
         public PayoutsService Payouts { get; }
         public RefundsService Refunds { get; }
         public VirtualAccountsService VirtualAccounts { get; }
+        public CheckoutService Checkout { get; }
+        public CryptoService Crypto { get; }
+        public CryptoPayoutsService CryptoPayouts { get; }
+        public WebhooksService Webhooks { get; }
 
         public CrayClient(string baseUrl, string token)
         {
@@ -39,6 +43,10 @@ namespace Cray
             Payouts = new PayoutsService(this);
             Refunds = new RefundsService(this);
             VirtualAccounts = new VirtualAccountsService(this);
+            Checkout = new CheckoutService(this);
+            Crypto = new CryptoService(this);
+            CryptoPayouts = new CryptoPayoutsService(this);
+            Webhooks = new WebhooksService(this);
         }
 
         public async Task<T> PostAsync<T>(string endpoint, object data)

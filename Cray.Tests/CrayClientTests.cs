@@ -23,6 +23,11 @@ namespace Cray.Tests
             Assert.NotNull(client.FX);
             Assert.NotNull(client.Payouts);
             Assert.NotNull(client.Refunds);
+            Assert.NotNull(client.VirtualAccounts);
+            Assert.NotNull(client.Checkout);
+            Assert.NotNull(client.Crypto);
+            Assert.NotNull(client.CryptoPayouts);
+            Assert.NotNull(client.Webhooks);
         }
 
         // Note: To test HTTP calls properly, we would need to inject HttpMessageHandler into CrayClient.
